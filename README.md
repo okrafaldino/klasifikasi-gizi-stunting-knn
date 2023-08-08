@@ -1,62 +1,31 @@
-# CodeIgniter 4 Application Starter
+# README: Aplikasi Klasifikasi Status Stunting Balita
 
-## What is CodeIgniter?
+Selamat datang di repositori Aplikasi Klasifikasi Status Stunting Balita. Aplikasi ini merupakan hasil dari penelitian tentang klasifikasi status stunting pada balita berbasis web dengan menggunakan metode K-Nearest Neighbours. Berikut adalah informasi penting tentang aplikasi ini:
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Deskripsi
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Aplikasi ini bertujuan untuk membantu Instansi Kesehatan di Kelurahan Ulak Karang Selatan dalam mengidentifikasi status stunting pada balita. Metode K-Nearest Neighbours digunakan untuk melakukan klasifikasi berdasarkan data antropometri balita. Aplikasi ini dapat memprediksi apakah seorang balita masuk dalam kategori stunting atau tidak.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Fitur Utama
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- Klasifikasi Status Stunting: Aplikasi memungkinkan pengguna untuk menginput data balita, seperti umur, berat badan, dan tinggi badan. Kemudian, aplikasi akan melakukan klasifikasi dan memberikan hasil apakah balita tersebut masuk dalam status stunting atau tidak.
 
-## Installation & updates
+- Tampilan Hasil Klasifikasi: Setiap hasil klasifikasi ditampilkan dalam tabel yang memberikan informasi tentang data balita, status klasifikasi, dan detail hasil klasifikasi seperti jarak terdekat dan balita-bailta terdekat.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+- Responsif dan User-Friendly: Antarmuka aplikasi didesain secara responsif dan mudah digunakan, sehingga pengguna dapat dengan mudah menginput data dan melihat hasil klasifikasi.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## Panduan Penggunaan
 
-## Setup
+- Installasi: Pastikan Anda memiliki lingkungan pengembangan PHP dan database MySQL terpasang di komputer Anda.
+- Unduh Repositori: Clone repositori ini ke dalam direktori web server Anda.
+- Konfigurasi Database: Buatlah database MySQL dan lakukan konfigurasi koneksi database di file config.php.
+- Akses Aplikasi: Buka aplikasi melalui browser dengan mengakses alamat URL sesuai dengan direktori tempat repositori di-host.
+  Kontribusi
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Kami sangat menghargai kontribusi dari semua pihak. Jika Anda ingin berkontribusi dalam pengembangan aplikasi ini, silakan fork repositori ini, lakukan perubahan sesuai kebutuhan, dan ajukan pull request.
 
-## Important Change with index.php
+## Kontak
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Jika Anda memiliki pertanyaan atau masukan lebih lanjut tentang aplikasi ini, jangan ragu untuk menghubungi kami melalui okrafaldino@gmail.com atau issue tracker.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Terima kasih telah menggunakan Aplikasi Klasifikasi Status Stunting Balita! Kami harap aplikasi ini dapat memberikan manfaat dan kontribusi dalam upaya penanganan stunting pada balita di Kelurahan Ulak Karang Selatan.
