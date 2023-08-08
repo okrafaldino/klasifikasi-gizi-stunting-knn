@@ -1,0 +1,52 @@
+<?= $this->extend('templates/index'); ?>
+
+<?= $this->section('page-content'); ?>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8">
+            <h1 class="mb-3">Form Ubah Data Uji Balita</h1>
+            <!-- error data -->
+            <?php if (session('validation')) : ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <ul>
+                        <?php foreach (session('validation')->getErrors() as $error) : ?>
+                            <li><?= esc($error) ?></li>
+                        <?php endforeach ?>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif ?>
+            <!-- error data -->
+            <form action="/klasifikasi/simpanupdate/<?= $uji['id']; ?>" method="post">
+                <?= csrf_field(); ?>
+                <div class="row mb-3">
+                    <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="nama" name="nama" autofocus value="<?= (old('nama')) ? old('nama') : $uji['nama']; ?>">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="umur" class="col-sm-2 col-form-label">Umur(bulan)</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="umur" name="umur" value="<?= (old('umur')) ? old('umur') : $uji['umur']; ?>">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="beratbadan" class="col-sm-2 col-form-label">Berat Badan(kg)</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="beratbadan" name="beratbadan" value="<?= (old('beratbadan')) ? old('beratbadan') : $uji['beratbadan']; ?>">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="tinggibadan" class="col-sm-2 col-form-label">Tinggi Badan(cm)</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="tinggibadan" name="tinggibadan" value="<?= (old('tinggibadan')) ? old('tinggibadan') : $uji['tinggibadan']; ?>">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Ubah Data</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<?= $this->endSection(); ?>
