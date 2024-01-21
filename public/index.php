@@ -10,6 +10,8 @@ if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
     );
 
     exit($message);
+
+//ini test
 }
 
 // Path to the front controller (this file)
